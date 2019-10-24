@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dr. Pinto.ca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/w3-theme-teal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+ 
+</head>
+    <body>
+
+        <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar">
+            <div class="w3-container w3-theme-d2">
+                <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+            </div>
+
+            <a class="w3-bar-item w3-button" href="Index.html">Home</a>
+            <a class="w3-bar-item w3-button" href="About-Us.html">About Us</a>
+            <a class="w3-bar-item w3-button" href="Our-Team.html">Our Team</a>
+            <a class="w3-bar-item w3-button" href="Treatment-Care.html">Treatment & Care</a>
+            <a class="w3-bar-item w3-button" href="Tour.html">Tour</a>
+            <a class="w3-bar-item w3-button" href="Gallery.html">Gallery</a>
+            <a class="w3-bar-item w3-button" href="Forms.html">Forms</a>
+            <a class="w3-bar-item w3-button" href="FAQs.html">FAQ’s</a>
+            <a class="w3-bar-item w3-button" href="Contact.html">Contact</a>
+
+
+        </nav>
+
+        <header class="w3-top w3-bar topheader_strip">
+            <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+            <h6 class=" w3-display-topmiddle pt_rrr "><img src="images/logo-1.jpg" alt="" /> <span class="font_size">Dr. Pinto & Associates</span></h6>
+            <h4 class="w3-bar-item w3-display-topright "><i class="fa fa-phone" aria-hidden="true"></i></h4>
+        </header>
+
+
+
+        <div class="w3-content w3-display-container" style="margin-top:70px">
+
+            <div class="w3-display-container mySlides">
+                <img src="images/slide-01.jpg" style="width:100%">
+                <div class="w3-display-bottomright w3-large w3-container w3-padding w3-black">
+                    French Alps
+                </div>
+            </div>
+
+            <div class="w3-display-container mySlides">
+                <img src="images/slide-02.jpg" style="width:100%">
+                <div class="w3-display-bottomright w3-large w3-container w3-padding w3-black">
+                    Northern Lights
+                </div>
+            </div>
+
+            <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+
+        </div>
+
+
+
+
+        <div class="w3-row-padding w3-container ex_margintop ">
+
+            <form>
+
+                <!--Body-->
+    <div class="form-group">
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter Your First Name" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Enter Your Last Name" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-2">
+
+            <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Enter Your Phone No." required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-2">
+            <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter Your Email" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-2">
+          
+           
+                <div id="datetimepicker4" class="input-append">
+                   
+                    <input type="datetime" data-format="yyyy-MM-dd" class="form-control" id="VisitDate" name="VisitDate" placeholder="Enter Your Visit Date" required>
+                    <span class="add-on">
+                        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                        </i>
+                    </span>
+                </div>
+           
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker4').datetimepicker({
+                        pickTime: false
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-2">
+         
+           
+                <div id="datetimepicker3" class="input-append">
+                    <input type="datetime" data-format="hh:mm:ss" class="form-control" id="VisitTime" name="VisitTime" placeholder="Enter Your Visit Time" required>
+                    <span class="add-on">
+                        <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                        </i>
+                    </span>
+                </div>
+            
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        pickDate: false
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group mb-2">
+            <textarea class="form-control" id="Message" name="Message" rows="6" placeholder="Enter Your Message" required></textarea>
+        </div>
+    </div>
+
+    <div class="text-left">
+        <button type="submit" id="Save" class="btn btn-info rounded-0 py-2">Send</button>
+    </div>
+
+    <br />
+    <br />
+    </form>
+
+
+    </div>
+
+
+
+    <footer class="w3-container w3-bottom topheader_strip w3-margin-top w3-center">
+        <h4>Request an Appointment</h4>
+    </footer>
+
+    <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script type="text/javascript"
+            src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript"
+            src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript"
+            src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#Save").click(function () {
+                var person = new Object();
+                person.Name = $('#Name').val();
+                person.Mobile = $('#Phone').val();
+                person.Email = $('#Email').val();
+                person.Message = $('#Message').val();
+
+
+
+                if (person.Name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                if (person.Mobile == "") {
+                    alert("Mobile must be filled out");
+                    return false;
+                }
+
+                if (person.Email == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+
+                if (person.Message == "") {
+                    alert("Message must be filled out");
+                    return false;
+                }
+
+                // http://localhost:49278/api/Feedbacksapi/
+                //$.post('https://finefixengineering.com/api/feedbacksapi/save', person, function (data) {
+                $.post('http://localhost:49278/api/Feedbacksapi/save', person, function (data) {
+                    alert('1');
+                    alert("Feedback enquiry has been submitted successfully!")
+                    console.log(data);
+                });
+
+                //$.ajax({
+                //    type: "POST",
+                //    url: "https://finefixengineering.com/api/feedbacksapi/save",
+                //    dataType: "json",
+                //    data: person,
+                //    success: function (response) {
+                //        alert("Feedback enquiry has been submitted successfully!");
+                //    }
+                //});
+
+
+            });
+        });
+    </script>
+
+
+    <script>
+        closeSidebar();
+        function openSidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+
+    </body>
+</html>
